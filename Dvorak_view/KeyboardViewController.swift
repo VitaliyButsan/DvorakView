@@ -35,6 +35,9 @@ class RoundButton: UIButton {
 
 class KeyboardViewController: UIInputViewController {
 
+
+    // MARK: Outlets
+
     @IBOutlet weak var upperComma: RoundButton!
     @IBOutlet weak var upperDot: RoundButton!
     @IBOutlet weak var P: RoundButton!
@@ -64,7 +67,11 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var W: RoundButton!
     @IBOutlet weak var V: RoundButton!
     @IBOutlet weak var Z: RoundButton!
+    @IBOutlet weak var upperShift: RoundButton!
+    @IBOutlet weak var upperOneTwoThree: RoundButton!
 
+// =========================================================================
+// =========================================================================
 
     @IBOutlet weak var lowerComma: RoundButton!
     @IBOutlet weak var lowerDot: RoundButton!
@@ -95,20 +102,71 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var _w: RoundButton!
     @IBOutlet weak var _v: RoundButton!
     @IBOutlet weak var _z: RoundButton!
-
-
-    @IBAction func upperLetters(_ sender: RoundButton) {
-        textDocumentProxy.insertText("\(sender.titleLabel!.text!)")
-    }
-    @IBAction func upper123(_ sender: RoundButton) {
-
-    }
-    @IBAction func upperShift(_ sender: RoundButton) {
-
-    }
+    @IBOutlet weak var lowerShift: RoundButton!
+    @IBOutlet weak var lowerOneTwoThree: RoundButton!
 
 // =========================================================================
 // =========================================================================
+
+    @IBOutlet weak var squareOpenBracket: RoundButton!
+    @IBOutlet weak var roundOpenBracket: RoundButton!
+    @IBOutlet weak var figuredOpenBracket: RoundButton!
+    @IBOutlet weak var sharpOpenBracket: RoundButton!
+    @IBOutlet weak var sharpClosingBracket: RoundButton!
+    @IBOutlet weak var figuredClosingBracket: RoundButton!
+    @IBOutlet weak var roundClosingBracket: RoundButton!
+    @IBOutlet weak var squareClosingBracket: RoundButton!
+    @IBOutlet weak var doublePaws: RoundButton!
+    @IBOutlet weak var numberOne: RoundButton!
+    @IBOutlet weak var numberTwo: RoundButton!
+    @IBOutlet weak var numberThree: RoundButton!
+    @IBOutlet weak var numberFour: RoundButton!
+    @IBOutlet weak var numberFive: RoundButton!
+    @IBOutlet weak var numberSix: RoundButton!
+    @IBOutlet weak var numberSeven: RoundButton!
+    @IBOutlet weak var numberEight: RoundButton!
+    @IBOutlet weak var numberNine: RoundButton!
+    @IBOutlet weak var numberZero: RoundButton!
+    @IBOutlet weak var singleQuote: RoundButton!
+    @IBOutlet weak var semicolon: RoundButton!
+    @IBOutlet weak var colon: RoundButton!
+    @IBOutlet weak var equally: RoundButton!
+    @IBOutlet weak var questionMark: RoundButton!
+    @IBOutlet weak var exclamationMark: RoundButton!
+    @IBOutlet weak var backslash: RoundButton!
+    @IBOutlet weak var slash: RoundButton!
+    @IBOutlet weak var ampersand: RoundButton!
+    @IBOutlet weak var pipe: RoundButton!
+    @IBOutlet weak var numberShift: RoundButton!
+    @IBOutlet weak var numberOneTwoThree: RoundButton!
+
+// =========================================================================
+// =========================================================================
+
+    @IBOutlet weak var arrowUp: RoundButton!
+    @IBOutlet weak var arrowDown: RoundButton!
+    @IBOutlet weak var arrowLeft: RoundButton!
+    @IBOutlet weak var arrowRight: RoundButton!
+    @IBOutlet weak var appleSign: RoundButton!
+    @IBOutlet weak var heartSign: RoundButton!
+    @IBOutlet weak var smile: RoundButton!
+    @IBOutlet weak var sad: RoundButton!
+    @IBOutlet weak var arrowEnter: RoundButton!
+    @IBOutlet weak var mailSign: RoundButton!
+    @IBOutlet weak var percentSign: RoundButton!
+    @IBOutlet weak var roofSign: RoundButton!
+    @IBOutlet weak var plusSign: RoundButton!
+    @IBOutlet weak var tildaSign: RoundButton!
+    @IBOutlet weak var buksMoneySign: RoundButton!
+    @IBOutlet weak var longDash: RoundButton!
+    @IBOutlet weak var plusMinusSign: RoundButton!
+    @IBOutlet weak var gridSign: RoundButton!
+    @IBOutlet weak var temperatureSign: RoundButton!
+
+
+
+
+    // MARK: Actions
 
     @IBAction func backSpace(_ sender: RoundButton) {
 
@@ -123,10 +181,21 @@ class KeyboardViewController: UIInputViewController {
         advanceToNextInputMode()
     }
 
-// ==========================================================================
-// ==========================================================================
+// =========================================================================
+// =========================================================================
 
+    @IBAction func upperLetters(_ sender: RoundButton) {
+        textDocumentProxy.insertText("\(sender.titleLabel!.text!)")
+    }
+    @IBAction func upperShift(_ sender: RoundButton) {
 
+    }
+    @IBAction func upper123(_ sender: RoundButton) {
+
+    }
+
+// =========================================================================
+// =========================================================================
 
     @IBAction func lowerLetters(_ sender: RoundButton) {
 
@@ -138,14 +207,38 @@ class KeyboardViewController: UIInputViewController {
         
     }
 
+// =========================================================================
+// =========================================================================
+
+    @IBAction func numbers(_ sender: RoundButton) {
+
+    }
+    @IBAction func numberShift(_ sender: RoundButton) {
+
+    }
+    @IBAction func number123(_ sender: RoundButton) {
+
+    }
+
+// =========================================================================
+// =========================================================================
+
+    @IBAction func symbols(_ sender: RoundButton) {
+
+    }
+    @IBAction func symbolShift(_ sender: RoundButton) {
+
+    }
+    @IBAction func symbol123(_ sender: RoundButton) {
+
+    }
 
 
 
 
 
 
-
-
+    // MARK: Override func
 
     override func updateViewConstraints() {
         super.updateViewConstraints()
